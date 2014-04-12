@@ -1,0 +1,10 @@
+body
+{
+  overflow: hidden;
+  font: 12.8px arial,sans-serif;
+  background-color: #fff;
+  padding: 3px;
+}
+ul {
+    list-style-type:none;
+}

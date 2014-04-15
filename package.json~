@@ -74,9 +74,9 @@
     		]
     },  
     {
-    	"label": "Reset",
-    	"name": "reset",
-    	"title": "Reset all settings back:",
-	"type": "control"
+    "type": "control",
+    "label": "Reset",
+    "name": "reset",
+    "title": "Reset all settings back:"
     }]
 }

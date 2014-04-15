@@ -1,3 +1,25 @@
 ul {
     list-style-type:none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    background-color: #DEEFFE;
+    padding: 2px 2px 2px 0px;
+    border: 2px solid white;
+    text-align: left;
+}
+
+.disabled {text-decoration: line-through;}
+
+.nospace {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+#foot-options {
+    position: absolute;
+    bottom: 7px;
 }

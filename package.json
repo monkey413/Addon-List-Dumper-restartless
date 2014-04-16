@@ -11,66 +11,66 @@
         "title": "version",
         "description": "show the version of addons",
         "type": "bool",
-        "value": "true"
+        "value": true
     },
     {
   	"name": "description",
         "title": "description",
         "description": "show the description of addons",
         "type": "bool",
-        "value": "false"
+        "value": false
     },
     {
   	"name": "url",
         "title": "URL",
         "description": "show the homepage url of addons",
         "type": "bool",
-        "value": "false"
+        "value": false
     },
     {
   	"name": "id",
         "title": "ID",
         "description": "show the ID of addons",
         "type": "bool",
-        "value": "false"
+        "value": false
     },
     {
   	"name": "softInfo",
         "title": "Software Infomation",
         "description": "show firefox version and operating system",
         "type": "bool",
-        "value": "true"
+        "value": true
     },
     {
   	"name": "total",
         "title": "Total",
         "description": "show the total of items",
         "type": "bool",
-        "value": "false"
+        "value": false
     },
     {
   	"name": "date",
         "title": "Date",
         "description": "show the date of today",
         "type": "bool",
-        "value": "false"
+        "value": false
     },
     {
   	"name": "installDate",
         "title": "Install Date",
         "description": "show the install date of addons",
         "type": "bool",
-        "value": "false"
+        "value": false
     },
     {
-  	"name": "Active",
+  	"name": "active",
         "title": "Active",
         "type": "menulist",
         "options": [
       		{"value": "0", "label": "All"},
       		{"value": "1", "label": "Active"},
 		{"value": "2", "label": "Incompatible"},
-		{"value": "2", "label": "Inactive"}
+		{"value": "3", "label": "Inactive"}
     		]
     },  
     {

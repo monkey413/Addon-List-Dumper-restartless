@@ -15,10 +15,6 @@ const addon = {
 
 self.port.on("Config", function(addonsConfig) {
     for (var i=0; i<addonsConfig.length; ++i){
-        $("#Names").append(
-            // 0:id 1: name 2: icons 3: isActive
-            (addonsConfig[i][addon.isActive]) ? $("<li>").append(addonsConfig[i][addon.name])
-                : $("<li>").append(addonsConfig[i][addon.name]).addClass("disabled")
-        );
+        $("#items").append("hello");
     }
 });

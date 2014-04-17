@@ -89,10 +89,6 @@ require("sdk/widget").Widget({
 	    }
         });
         
-        /* get the text and call the printer window/dialog */
-        dumpPanel.port.on("Print", function(text){
-            dumpPanel.contentWindow.print();
-        });
     }
 });
 

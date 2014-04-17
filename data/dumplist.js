@@ -134,4 +134,17 @@ $("select[name='active'], input[type='checkbox']").change(function(){
     buildOutput();
 });
 
+/* copy to clipboard */
+$("input[name='clipboard']").click(function(){
+    self.port.emit("Clipboard", $("#items").val());
+});
 
+/* save to file */
+$("input[name='save']").click(function(){
+    self.port.emit("Save", $("#items").val());
+});
+
+/* print */
+$("input[name='print']").click(function(){
+    window.print();
+});

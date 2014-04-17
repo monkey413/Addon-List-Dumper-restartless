@@ -28,3 +28,12 @@ body {
     bottom: 7px;
 }
 
+@media print {
+    textarea {
+        border: none;
+    }
+    
+    h4, table, #foot-options {
+        display: none;
+    }
+}

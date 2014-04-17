@@ -66,11 +66,12 @@
   	"name": "active",
         "title": "Active",
         "type": "menulist",
+	"value": "All",
         "options": [
-      		{"value": "0", "label": "All"},
-      		{"value": "1", "label": "Active"},
-		{"value": "2", "label": "Incompatible"},
-		{"value": "3", "label": "Inactive"}
+      		{"value": "All", "label": "All"},
+      		{"value": "Enabled", "label": "Enabled"},
+		{"value": "Incompatible", "label": "Incompatible"},
+		{"value": "Disabled", "label": "Disabled"}
     		]
     },  
     {

@@ -11,10 +11,14 @@ li {
     text-align: left;
 }
 
+body {
+    background-image: url("./flower.jpg");
+}
+
 .disabled {text-decoration: line-through;}
 
 .nospace {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     padding-bottom: 0px;
 }
 
@@ -23,3 +27,4 @@ li {
     position: absolute;
     bottom: 7px;
 }
+

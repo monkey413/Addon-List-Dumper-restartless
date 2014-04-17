@@ -7,24 +7,21 @@
     </script>
   </head>
   <body>
-    <ul id="Names">
-      <li> hello </li>
-      <li> hello2 </li>
-    </ul>
     <div id="">
-       <textarea name="" id="items" rows="10" cols="35" tabindex=""></textarea> 
+       <h4 class="nospace"> Addons </h4>
+       <textarea name="" id="items" rows="10" cols="42" tabindex=""></textarea> 
     </div> 
-    <h4>Total:</h4>
+    <h4 name="total">Total:</h4>
     <div>
       <h4 class="nospace">Display:</h4>
       <table>
         <tr> 
           <td> <input type="checkbox" name="version" value="version" /> Version </td>
-          <td> <input type="checkbox" name="information" value="information" /> Information </td>
+          <td> <input type="checkbox" name="softInfo" value="softInfo" /> Information </td>
         </tr>
         <tr> 
-          <td> <input type="checkbox" name="description" value="description" /> Version </td>
-          <td> <input type="checkbox" name="totoalItems" value="totalItems" />  Total Items</td> 
+          <td> <input type="checkbox" name="description" value="description" /> Description </td>
+          <td> <input type="checkbox" name="total" value="total" />  Total Items</td> 
         </tr>
         <tr> 
           <td> <input type="checkbox" name="url" value="url" /> URL</td> 
@@ -33,7 +30,7 @@
         <tr> 
           <td> <input type="checkbox" name="id" value="id" /> ID</td> 
           <td>
-            <select id="compatible-options" name="compatible-options" >
+            <select id="active" name="active" >
               <option value="All">All</option>
               <option value="Enabled">Enabled</option>
               <option value="Incompatible">Incompatible</option>

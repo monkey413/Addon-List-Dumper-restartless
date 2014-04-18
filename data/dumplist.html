@@ -19,6 +19,14 @@
         <tr> 
           <td> <input type="checkbox" name="version" value="version" /> Version </td>
           <td> <input type="checkbox" name="softInfo" value="softInfo" /> Information </td>
+          <td>
+            <select id="sort" name="sort">
+              <option selected disabled>Sort By:</option>
+              <option value="Name">Name</option>
+              <option value="InstallDate">Install Date</option>
+              <option value="ID">ID</option>
+            </select>
+          </td>
         </tr>
         <tr> 
           <td> <input type="checkbox" name="description" value="description" /> Description </td>
@@ -32,6 +40,7 @@
           <td> <input type="checkbox" name="id" value="id" /> ID</td> 
           <td>
             <select id="active" name="active" >
+              <option selected disabled>Choose a status:</option>
               <option value="All">All</option>
               <option value="Enabled">Enabled</option>
               <option value="Incompatible">Incompatible</option>
@@ -41,6 +50,16 @@
         </tr>
         <tr> 
           <td> <input type="checkbox" name="installDate" value="installDate" /> Install date</td> 
+          <td> 
+            <select id="" name="type" >
+              <option selected disabled>Choose a type:</option>
+              <option value="All">All</option>
+              <option value="Extension">Extension</option>
+              <option value="Theme">Theme</option>
+              <option value="Plugin">Plugin</option>
+              <option value="Locale">Locale</option>
+            </select> 
+          </td>
         </tr>
       </table>
     </div>

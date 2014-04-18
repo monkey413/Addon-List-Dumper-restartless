@@ -1,3 +1,0 @@
-$.get("about:config", function(data){
-  console.log("Data Loaded: ");
-});

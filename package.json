@@ -2,7 +2,7 @@
   "name": "extension-list-dumper",
   "title": "Extension List Dumper (restartless)",
   "id": "extensionListDumper",
-  "description": "",
+  "description": "This extension adds a widget on the navigation bar. \n\nWhen this widget is pushed, a panel will show the addons list",
   "author": "monkey413",
   "license": "GPL 3.0",
   "version": "0.1",
@@ -75,7 +75,31 @@
 		{"value": "Incompatible", "label": "Incompatible"},
 		{"value": "Disabled", "label": "Disabled"}
     		]
-    },  
+    },
+    {
+  	"name": "type",
+        "title": "Type",
+        "type": "menulist",
+	"value": "All",
+        "options": [
+      		{"value": "All", "label": "All"},
+      		{"value": "Extension", "label": "Extension"},
+		{"value": "Theme", "label": "Theme"},
+		{"value": "Plugin", "label": "Plugin"},
+		{"value": "Locale", "label": "Locale"}
+    		]
+    },
+    {
+  	"name": "sort",
+        "title": "Sort",
+        "type": "menulist",
+	"value": "Name",
+        "options": [
+      		{"value": "Name", "label": "Name"},
+      		{"value": "InstallDate", "label": "Install Date"},
+		{"value": "ID", "label": "ID"}
+    		]
+    },
     {
     	"label": "Reset",
     	"name": "reset",

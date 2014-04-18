@@ -11,7 +11,8 @@ const addon = {
     description: 5,
     homepageURL: 6,
     installDate: 7,
-    isCompatible: 8
+    isCompatible: 8,
+    type: 9
 };
 
 /* Get the needed addons information */
@@ -40,6 +41,8 @@ self.port.on("Prefs", function(preferences) {
     $("input[name='date']").prop("checked",prefs.date);
     $("input[name='installDate']").prop("checked",prefs.installDate); 
     $("select[name='active']").val(prefs.active);
+    $("select[name='type']").val(prefs.type);
+    $("select[name='sort']").val(prefs.sort);
     
     // console.log($("input[name='version']").prop("checked"));
     // console.log(softInfo);
@@ -61,7 +64,9 @@ function buildOutput(){
         date: $("input[name='date']").prop("checked"),
         installDate: $("input[name='installDate']").prop("checked"),
         active: $("select[name='active']").val(),
-        
+        type: $("select[name='type']").val(),
+        sort: $("select[name='sort']").val(),
+
         selectActive: {
             All: function(){
                 let addonItems = $.extend(true, [], addonsInfo);
@@ -100,7 +105,52 @@ function buildOutput(){
                 
                 return addonItems;
             }
+        },
+        
+        selectType: {
+            All: function(addons){
+                return addons;
+            },
+            Extension: function(addons){
+                return addons.filter(function(elem){
+                    return (elem[addon.type] == "extension");
+                });
+            }, 
+            Theme: function(addons){
+                return addons.filter(function(elem){
+                    return (elem[addon.type] == "theme");
+                });
+            }, 
+            Plugin: function(addons){
+                return addons.filter(function(elem){
+                    return (elem[addon.type] == "plugin");
+                });
+            },
+            Locale: function(addons){
+                return addons.filter(function(elem){
+                    return (elem[addon.type] == "locale");
+                });
+            }
+        },
+        
+        selectSort: {
+            Name: function(addons){
+                return addons.sort(function(a,b){
+                    return a[addon.name]>b[addon.name];
+                });
+            },
+            InstallDate: function(addons){
+                return addons.sort(function(a,b){
+                    return (new Date(a[addon.installDate])) > (new Date(b[addon.installDate]));
+                });
+            },
+            ID: function(addons){
+                return addons.sort(function(a,b){
+                    return a[addon.id]>b[addon.id];
+                });
+            }
         }
+        
     };
     $("#items").val("");
 
@@ -114,6 +164,12 @@ function buildOutput(){
     /* Select All or Enabled or Disabled or Incompatible */
     let addonItems = option.selectActive[option.active]();
     
+    /* Select All or Extension or Plugin or Locale */
+    addonItems = option.selectType[option.type](addonItems);
+    
+    /* Sort by name or install date or id */
+    addonItems = option.selectSort[option.sort](addonItems);
+
     $("h4[name='total']").text("Total: "+addonItems.length);
     if (option.total)
         $("#items").val($("#items").val()+"Total number of items: "+
@@ -125,12 +181,12 @@ function buildOutput(){
                         (option.description ? "    "+addonItems[i][addon.description]+"\n" : "") + 
                         (option.url && !(addonItems[i][addon.homepageURL]===null) ? "    "+addonItems[i][addon.homepageURL]+"\n" : "") + 
                         (option.id ? "    "+addonItems[i][addon.id]+"\n" : "") + 
-                        (option.installDate ? "    "+addonItems[i][addon.installDate]+"\n" : ""));
+                        (option.installDate ? "    "+(new Date(addonItems[i][addon.installDate])).toLocaleDateString()+"\n" : ""));
     }
 }
 
 /* Update */
-$("select[name='active'], input[type='checkbox']").change(function(){
+$("select, input[type='checkbox']").change(function(){
     buildOutput();
 });
 

@@ -1,11 +1,13 @@
 {
-  "name": "my-addon",
-  "title": "my-addon",
-  "id": "jid1-xOYqpzlfrHQxyw",
-  "description": "a basic add-on",
+  "name": "extension-list-dumper",
+  "title": "Extension List Dumper restartless",
+  "id": "extensionListDumper",
+  "description": "",
   "author": "monkey413",
-  "license": "MPL 2.0",
+  "license": "GPL 3.0",
   "version": "0.1",
+
+
   "preferences": [{
         "name": "version",
         "title": "version",
@@ -69,9 +71,9 @@
 	"value": "All",
         "options": [
       		{"value": "All", "label": "All"},
-      		{"value": "Active", "label": "Active"},
+      		{"value": "Enabled", "label": "Enabled"},
 		{"value": "Incompatible", "label": "Incompatible"},
-		{"value": "Inactive", "label": "Inactive"}
+		{"value": "Disabled", "label": "Disabled"}
     		]
     },  
     {

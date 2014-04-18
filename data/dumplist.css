@@ -15,6 +15,15 @@ body {
     background-image: url("./flower.jpg");
 }
 
+h4 {
+    color: black;
+    font-style: bold;
+}
+
+table {
+    color: black;
+}
+
 .disabled {text-decoration: line-through;}
 
 .nospace {
@@ -22,6 +31,9 @@ body {
     padding-bottom: 0px;
 }
 
+#print_helper {
+  display: none;
+}
 
 #foot-options {
     position: absolute;
@@ -29,11 +41,15 @@ body {
 }
 
 @media print {
-    textarea {
-        border: none;
+    #printHelper {
+        display: block;
+        overflow: visible;
+        font-family: Menlo, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", Monaco, monospace;
+        white-space: pre;
+        white-space: pre-wrap;
     }
-    
-    h4, table, #foot-options {
+
+    textarea, h4, table, #foot-options {
         display: none;
     }
 }

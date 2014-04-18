@@ -141,10 +141,11 @@ $("input[name='clipboard']").click(function(){
 
 /* save to file */
 $("input[name='save']").click(function(){
-    self.port.emit("Save", $("#items").val());
+    self.port.emit("SaveText", $("#items").val());
 });
 
 /* print */
 $("input[name='print']").click(function(){
+    $('#printHelper').text($('textarea').val());
     window.print();
 });

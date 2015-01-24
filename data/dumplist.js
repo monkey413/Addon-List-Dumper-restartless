@@ -136,7 +136,7 @@ function buildOutput(){
         selectSort: {
             Name: function(addons){
                 return addons.sort(function(a,b){
-                    return a[addon.name]>b[addon.name];
+                    return a[addon.name].toUpperCase()>b[addon.name].toUpperCase();
                 });
             },
             InstallDate: function(addons){
@@ -153,7 +153,6 @@ function buildOutput(){
         
     };
     $("#items").val("");
-
     if (option.softInfo) 
         $("#items").val($("#items").val()+softInfo+"\n\n");
     
@@ -176,7 +175,7 @@ function buildOutput(){
                         addonItems.length+"\n\n");
 
     for (let i=0; i<addonItems.length; ++i){
-        $("#items").val($("#items").val()+"-"+addonItems[i][addon.name]+" "+
+        $("#items").val($("#items").val()+"- "+addonItems[i][addon.name]+" "+
                         (option.version ? addonItems[i][addon.version]+"\n" : "\n") +  
                         (option.description ? "    "+addonItems[i][addon.description]+"\n" : "") + 
                         (option.url && !(addonItems[i][addon.homepageURL]===null) ? "    "+addonItems[i][addon.homepageURL]+"\n" : "") + 

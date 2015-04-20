@@ -5,7 +5,7 @@
   "description": "This extension adds a widget on the navigation bar. \n\nWhen this widget is pushed, a panel will show the addons list",
   "author": "monkey413",
   "license": "GPL 3.0",
-  "version": "0.1",
+  "version": "0.2",
   "homepage": "https://github.com/monkey413/Addon-List-Dumper-restartless",
 
 
